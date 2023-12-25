@@ -1,9 +1,7 @@
 package com.stevdza.san.models
 
-import com.stevdza.san.sections.AchievementsContent
 import com.stevdza.san.util.Constants.LOREM_IPSUM_SHORT
 import com.stevdza.san.util.Res
-import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 
 enum class Testimonial(
     val image: String,
@@ -47,5 +45,4 @@ enum class Testimonial(
         profession = "Cyber Security Analyst",
         review = LOREM_IPSUM_SHORT
     )
-
 }

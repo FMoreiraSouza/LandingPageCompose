@@ -7,7 +7,6 @@ import com.stevdza.san.util.Constants.FONT_FAMILY
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
@@ -22,7 +21,6 @@ fun TestimonialCard(
     modifier: Modifier = Modifier,
     testimonial: Testimonial,
     breakpoint: Breakpoint
-
 ) {
     Row(modifier = modifier.maxWidth(500.px)) {
         Image(
@@ -71,9 +69,7 @@ fun TestimonialCard(
                     }
                     RatingBar(modifier = Modifier.margin(top = 10.px))
                 }
-
             }
-
             P(
                 attrs = Modifier
                     .fillMaxWidth()
@@ -88,5 +84,4 @@ fun TestimonialCard(
             }
         }
     }
-
 }

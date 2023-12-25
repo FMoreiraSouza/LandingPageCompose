@@ -3,11 +3,8 @@ package com.stevdza.san.components
 import androidx.compose.runtime.Composable
 import com.stevdza.san.models.Service
 import com.stevdza.san.models.Theme
-import com.stevdza.san.styles.AboutTextStyle
 import com.stevdza.san.styles.ServiceCardStyle
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.FONT_FAMILY
-import com.varabyte.kobweb.compose.css.FontStyle
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -28,7 +25,6 @@ fun ServiceCard(service: Service) {
             .maxWidth(300.px)
             .margin(all = 20.px)
             .padding(all = 20.px)
-
     ) {
         Box(
             modifier = Modifier.id("iconBox")
@@ -47,7 +43,6 @@ fun ServiceCard(service: Service) {
                 src = service.icon,
                 description = service.imageDesc
             )
-
         }
         P(
             attrs = Modifier
@@ -71,7 +66,5 @@ fun ServiceCard(service: Service) {
         ) {
             Text(service.description)
         }
-
     }
 }
-

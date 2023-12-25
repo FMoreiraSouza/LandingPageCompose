@@ -4,7 +4,6 @@ import androidx.compose.runtime.*
 import com.stevdza.san.components.ContactForm
 import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.models.Section
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.ObserveViewportEntered
 import com.varabyte.kobweb.compose.css.CSSTransition
@@ -75,5 +74,3 @@ fun ContactContent() {
         ContactForm(breakpoint = breakpoint)
     }
 }
-
-

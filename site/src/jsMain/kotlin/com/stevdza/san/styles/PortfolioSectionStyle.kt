@@ -19,7 +19,7 @@ val PortfolioSectionStyle by ComponentStyle {
     }
 
     cssRule(":hover > #columnParent > #boxParent > #greenOverlay") {
-        Modifier.width(0.px)
+        Modifier.width(300.px)
     }
     cssRule(" > #columnParent > #boxParent > #greenOverlay > #linkIcon") {
         Modifier
@@ -27,7 +27,7 @@ val PortfolioSectionStyle by ComponentStyle {
 
     }
 
-    cssRule(":hover > #columnParent > #boxParent > #greenOverlay") {
+    cssRule(":hover > #columnParent > #boxParent > #greenOverlay > #linkIcon") {
         Modifier.visibility(Visibility.Visible)
     }
     cssRule(" > #columnParent > #portfolioTitle") {
@@ -48,7 +48,7 @@ val PortfolioSectionStyle by ComponentStyle {
     cssRule(" > #columnParent > #portfolioDesc") {
         Modifier
             .translateX(0.percent)
-            .transition(CSSTransition(property = "color", duration = 200.ms))
+            .transition(CSSTransition(property = "translate", duration = 200.ms))
     }
 
     cssRule(":hover > #columnParent > #portfolioDesc") {

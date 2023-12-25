@@ -40,7 +40,6 @@ fun ExperienceCard(
         ExperienceDescription(
             active = active,
             description = experience.description
-
         )
         ExperienceDetails(
             breakpoint = breakpoint,
@@ -49,7 +48,6 @@ fun ExperienceCard(
             animatedMargin = animatedMargin
         )
     }
-
 }
 
 @Composable
@@ -84,7 +82,6 @@ fun ExperienceDetails(
     active: Boolean,
     experience: Experience,
     animatedMargin: CSSSizeValue<CSSUnit.px>
-
 ) {
     Row(
         modifier = Modifier
@@ -155,7 +152,6 @@ fun ExperienceNumber(
             .margin(right = 14.px)
             .fillMaxHeight(),
         contentAlignment = Alignment.Center
-
     )
     {
         Box(
@@ -171,7 +167,6 @@ fun ExperienceNumber(
                     width = 3.px,
                     style = LineStyle.Solid,
                     color = Theme.Primary.rgb
-
                 )
                 .backgroundColor(if (active) Theme.Primary.rgb else Colors.White)
                 .borderRadius(50.percent),
@@ -190,5 +185,4 @@ fun ExperienceNumber(
             }
         }
     }
-
 }

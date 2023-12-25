@@ -4,13 +4,13 @@ import androidx.compose.runtime.Composable
 import com.stevdza.san.models.Portfolio
 import com.stevdza.san.models.Theme
 import com.stevdza.san.styles.PortfolioSectionStyle
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.FONT_FAMILY
 import com.stevdza.san.util.Constants.WEBSITE
 import com.stevdza.san.util.Res
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.Width
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -20,7 +20,6 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.graphics.Image
-
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.style.toModifier
 import org.jetbrains.compose.web.css.percent
@@ -40,7 +39,7 @@ fun PortfolioCard(
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     )
     {
-        Column(modifier = Modifier.id("columnParent")) {
+        Column(modifier = modifier.id("columnParent").width(Width.MaxContent)) {
             Box(
                 modifier = Modifier
                     .id("boxParent")
@@ -60,7 +59,6 @@ fun PortfolioCard(
                     modifier = Modifier
                         .id("greenOverlay")
                         .fillMaxHeight()
-                        .fillMaxSize()
                         .backgroundColor(argb(a = 0.5f, r = 0, g = 167, b = 142)),
                     contentAlignment = Alignment.Center
 
@@ -98,9 +96,8 @@ fun PortfolioCard(
                     .opacity(50.percent)
                     .toAttrs()
             ) {
-                Text(portfolio.title)
+                Text(portfolio.description)
             }
         }
-
     }
 }

@@ -63,9 +63,6 @@ fun AchievementCard(
             ) {
                 Text(achievement.description)
             }
-
         }
-
     }
-
 }

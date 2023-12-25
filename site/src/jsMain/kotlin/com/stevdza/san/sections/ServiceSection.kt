@@ -5,7 +5,6 @@ import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.components.ServiceCard
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Service
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -30,7 +29,6 @@ fun ServiceSection() {
     ) {
         ServiceContent()
     }
-
 }
 
 @Composable
@@ -46,14 +44,15 @@ fun ServiceContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            modifier = Modifier.fillMaxWidth().margin(bottom = 20.px),
+            modifier = Modifier
+                .fillMaxWidth()
+                .margin(bottom = 20.px),
             section = Section.Service,
             alignment = Alignment.CenterHorizontally
         )
         SimpleGrid(numColumns = numColumns(base = 1, sm = 2, md = 3)){
             Service.values().forEach{ service ->
                 ServiceCard(service = service)
-
             }
         }
     }

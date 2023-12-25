@@ -29,9 +29,7 @@ fun SocialBar(row: Boolean = false) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-
             SocialLinks(row = true)
-
         }
     } else {
         Column(
@@ -44,9 +42,7 @@ fun SocialBar(row: Boolean = false) {
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-
             SocialLinks()
-
         }
     }
 }
@@ -63,7 +59,6 @@ private fun SocialLinks(row: Boolean = false) {
                     bottom = if (row) 0.px else 40.px,
                     right = if (row) 40.px else 0.px
                 ),
-
             size = IconSize.LG
         )
     }
@@ -101,5 +96,4 @@ private fun SocialLinks(row: Boolean = false) {
             size = IconSize.LG
         )
     }
-
 }

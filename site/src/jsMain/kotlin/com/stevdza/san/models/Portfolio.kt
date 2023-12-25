@@ -6,9 +6,7 @@ enum class Portfolio(
     val image: String,
     val title: String,
     val description: String
-
 ){
-
     One(
         image = Res.Image.portfolio1,
         title = "Kudoe",
@@ -34,5 +32,4 @@ enum class Portfolio(
         title = "Platform for Online Courses",
         description = "Web/Mobile App"
     )
-
 }

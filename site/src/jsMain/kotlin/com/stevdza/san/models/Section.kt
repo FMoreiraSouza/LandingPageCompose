@@ -6,7 +6,6 @@ enum class Section(
     val subtitle: String,
     val path: String
 ) {
-
     Home(
         id = "home",
         title = "Home",
@@ -55,5 +54,4 @@ enum class Section(
         subtitle = "Personal Achievements",
         path = "#achievements"
     )
-
 }

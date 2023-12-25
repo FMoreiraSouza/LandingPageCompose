@@ -18,13 +18,12 @@ import org.jetbrains.compose.web.dom.Text
 
 @Composable
 fun SkillBar(
-    name: String,
+    title: String,
     index: Int,
     progressBarHeight: CSSSizeValue<CSSUnit.px> = 5.px,
     percentage: CSSSizeValue<CSSUnit.percent> = 50.percent,
     animatedPercentage: Int
 ) {
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -45,8 +44,8 @@ fun SkillBar(
                     .fontWeight(FontWeight.Normal)
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
-            ){
-                Text(name)
+            ) {
+                Text(title)
             }
             P(
                 attrs = Modifier
@@ -56,18 +55,16 @@ fun SkillBar(
                     .fontWeight(FontWeight.Normal)
                     .color(Theme.Secondary.rgb)
                     .toAttrs()
-            ){
+            ) {
                 Text("$animatedPercentage%")
             }
         }
-        Box(modifier = Modifier.fillMaxWidth()){
+        Box(modifier = Modifier.fillMaxWidth()) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(progressBarHeight)
                     .backgroundColor(Theme.LightGray.rgb)
-
-
             )
             Box(
                 modifier = Modifier
@@ -79,13 +76,9 @@ fun SkillBar(
                             property = "width",
                             duration = 1000.ms,
                             delay = 100.ms * index
-
                         )
                     )
-
-
             )
         }
     }
-
 }

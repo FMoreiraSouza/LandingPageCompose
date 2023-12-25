@@ -45,6 +45,5 @@ object Res{
         const val avatar4 = "avatar4.png"
         const val avatar5 = "avatar5.png"
         const val avatar6 = "avatar6.png"
-
     }
 }

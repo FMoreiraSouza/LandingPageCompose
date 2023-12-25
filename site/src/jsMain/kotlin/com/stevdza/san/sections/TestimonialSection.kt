@@ -77,8 +77,8 @@ fun TestimonialCards(
     breakpoint: Breakpoint,
     selectedPage: Int
 ) {
-    val testimonial1 = listOf(Testimonial.First, Testimonial.Second, Testimonial.Third)
-    val testimonial2 = listOf(Testimonial.Fourth, Testimonial.Fifth, Testimonial.Sixth)
+    val testimonial1 = listOf(Testimonial.First, Testimonial.Third, Testimonial.Fifth)
+    val testimonial2 = listOf(Testimonial.Second, Testimonial.Fourth, Testimonial.Sixth)
     SimpleGrid(
         modifier = Modifier
             .fillMaxWidth(

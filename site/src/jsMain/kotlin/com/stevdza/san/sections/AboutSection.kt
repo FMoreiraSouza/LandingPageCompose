@@ -46,7 +46,6 @@ fun AboutSection() {
     ) {
         AboutContent()
     }
-
 }
 
 @Composable
@@ -73,11 +72,8 @@ fun AboutContent() {
                 AboutImage()
             }
             AboutMe()
-
         }
-
     }
-
 }
 
 @Composable
@@ -85,13 +81,11 @@ fun AboutImage() {
     Box(
         modifier = Modifier
             .fillMaxWidth(), contentAlignment = Alignment.Center
-
     ) {
         Image(
             modifier = AboutImageStyle.toModifier().fillMaxWidth(80.percent),
             src = Res.Image.about,
             description = "About Image"
-
         )
     }
 }
@@ -119,6 +113,7 @@ fun AboutMe() {
             }
         }
     )
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center
@@ -139,7 +134,7 @@ fun AboutMe() {
         }
         Skill.values().forEach { skill ->
             SkillBar(
-                name = skill.title,
+                title = skill.title,
                 index = skill.ordinal,
                 percentage = if (viewportEntered) skill.percentage else 0.percent,
                 animatedPercentage = if (viewportEntered) animatedPercentage[skill.ordinal] else 0

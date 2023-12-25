@@ -34,7 +34,6 @@ fun BackToTopButton() {
             scroll = document.documentElement?.scrollTop
         })
     }
-
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -67,14 +66,11 @@ fun BackToTopButton() {
                     property("pointer-events", "auto")
                 },
             contentAlignment = Alignment.Center
-
         ) {
             FaArrowUp(
                 modifier = Modifier.color(Colors.White),
                 size = IconSize.LG
-
             )
         }
-
     }
 }

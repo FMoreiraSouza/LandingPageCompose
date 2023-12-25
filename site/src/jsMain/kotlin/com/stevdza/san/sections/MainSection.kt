@@ -34,7 +34,6 @@ import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-
 @Composable
 fun MainSection(onMenuClicked: () -> Unit) {
 
@@ -47,7 +46,6 @@ fun MainSection(onMenuClicked: () -> Unit) {
         MainBackground()
         MainContent(onMenuClicked = onMenuClicked)
     }
-
 }
 
 @Composable
@@ -68,7 +66,6 @@ fun MainContent(onMenuClicked: () -> Unit) {
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.SpaceBetween,
         horizontalAlignment = Alignment.CenterHorizontally
-
     ) {
         Header(onMenuClicked = onMenuClicked)
         Column(
@@ -86,15 +83,12 @@ fun MainContent(onMenuClicked: () -> Unit) {
                 MainText(breakpoint = breakpoint)
                 MainImage()
             }
-
         }
     }
 }
 
-
 @Composable
 fun MainText(breakpoint: Breakpoint) {
-
     Row(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
@@ -158,7 +152,6 @@ fun MainText(breakpoint: Breakpoint) {
                     .color(Colors.White)
                     .cursor(Cursor.Pointer)
                     .toAttrs()
-
             ) {
                 Link(
                     modifier = Modifier
@@ -167,9 +160,7 @@ fun MainText(breakpoint: Breakpoint) {
                     text = "Hire me",
                     path = Section.Contact.path
                 )
-
             }
-
         }
     }
 }

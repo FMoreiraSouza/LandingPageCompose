@@ -8,7 +8,6 @@ enum class Skill(
     val title: String,
     val percentage: CSSSizeValue<CSSUnit.percent>
 ) {
-
     Creative(
         title = "Creative",
         percentage = 90.percent
@@ -29,5 +28,4 @@ enum class Skill(
         title = "On-Time Delivery",
         percentage = 75.percent
     )
-
 }

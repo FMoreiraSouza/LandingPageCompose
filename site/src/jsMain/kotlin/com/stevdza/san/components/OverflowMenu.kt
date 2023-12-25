@@ -31,7 +31,6 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
     val breakpoint = rememberBreakpoint()
     var translateX by remember { mutableStateOf((-100).percent) }
     var opacity by remember { mutableStateOf(0.percent) }
-
     LaunchedEffect(breakpoint) {
         translateX = 0.percent
         opacity = 100.percent
@@ -64,7 +63,6 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
                 .backgroundColor(Colors.White)
                 .translateX(tx = translateX)
                 .transition(CSSTransition(property = "translate", duration = 500.ms))
-
         ) {
             Row(
                 modifier = Modifier.margin(bottom = 25.px),

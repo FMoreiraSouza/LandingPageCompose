@@ -6,7 +6,6 @@ import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.models.Portfolio
 import com.stevdza.san.models.Section
 import com.stevdza.san.styles.PortfolioArrowIconStyle
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.Overflow
@@ -54,13 +53,14 @@ fun PortfolioContent() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         SectionTitle(
-            modifier = Modifier.fillMaxWidth().margin(bottom = 25.px),
+            modifier = Modifier
+                .fillMaxWidth()
+                .margin(bottom = 25.px),
             section = Section.Portfolio
         )
         PortfolioCards(breakpoint = breakpoint)
         PortfolioNavigation()
     }
-
 }
 
 @Composable
@@ -80,7 +80,8 @@ fun PortfolioCards(breakpoint: Breakpoint) {
     ) {
         Portfolio.values().forEach { portfolio ->
             PortfolioCard(
-                modifier = Modifier.margin(right = if (portfolio != Portfolio.Five) 25.px else 0.px),
+                modifier = Modifier
+                    .margin(right = if (portfolio != Portfolio.Five) 25.px else 0.px),
                 portfolio = portfolio
             )
         }
@@ -109,11 +110,8 @@ fun PortfolioNavigation() {
                 .onClick {
                     document.getElementById("scrollableContainer")
                         ?.scrollBy(x = 325.0, y = 0.0)
-
                 },
             size = IconSize.LG
         )
-
     }
-
 }

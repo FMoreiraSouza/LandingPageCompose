@@ -5,7 +5,6 @@ import com.stevdza.san.components.ExperienceCard
 import com.stevdza.san.components.SectionTitle
 import com.stevdza.san.models.Experience
 import com.stevdza.san.models.Section
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.ObserveViewportEntered
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -17,7 +16,6 @@ import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import kotlin.math.exp
 
 @Composable
 fun ExperienceSection() {
@@ -30,7 +28,6 @@ fun ExperienceSection() {
     ) {
         ExperienceContent()
     }
-
 }
 
 @Composable
@@ -43,11 +40,8 @@ fun ExperienceContent() {
         distanceFromTop = 500.0,
         onViewportEntered = {
             animatedMargin = 50.px
-
         }
-
     )
-
     Column(
         modifier = Modifier
             .fillMaxWidth(

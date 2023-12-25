@@ -5,7 +5,6 @@ import com.stevdza.san.components.SocialBar
 import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
 import com.stevdza.san.styles.NavigationItemStyle
-import com.stevdza.san.util.Constants
 import com.stevdza.san.util.Constants.FONT_FAMILY
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.Res
@@ -85,7 +84,6 @@ fun FooterMenu(row: Boolean = true) {
                     right = if (row) 20.px else 0.px,
                     bottom = if (row) 0.px else 20.px
                 )
-
                 .fontSize(12.px)
                 .fontWeight(FontWeight.Normal)
                 .textDecorationLine(TextDecorationLine.None),

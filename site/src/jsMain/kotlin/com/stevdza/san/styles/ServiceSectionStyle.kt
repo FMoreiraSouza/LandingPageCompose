@@ -28,14 +28,12 @@ val ServiceCardStyle by ComponentStyle {
         Modifier
             .border(width = 2.px, style = LineStyle.Solid, color = Theme.Primary.rgb)
             .backgroundColor(Theme.Primary.rgb)
-
     }
 
     cssRule(" > #iconBox"){
         Modifier
             .backgroundColor(Colors.Transparent)
             .transition(CSSTransition(property = "background", duration = 200.ms))
-
     }
 
     cssRule(":hover > #iconBox"){
@@ -52,5 +50,4 @@ val ServiceCardStyle by ComponentStyle {
     cssRule(":hover > p"){
         Modifier.color(Colors.White)
     }
-
 }

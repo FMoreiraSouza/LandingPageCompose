@@ -41,7 +41,6 @@ fun Header(onMenuClicked: () -> Unit) {
         if (breakpoint > Breakpoint.MD) {
             RightSide()
         }
-
     }
 }
 
@@ -56,11 +55,9 @@ fun LeftSide(
                 modifier = Modifier.margin(right = 15.px)
                     .onClick {
                         onMenuClicked()
-
                     },
                 size = IconSize.XL
             )
-
         }
         Image(
             modifier = LogoStyle.toModifier(),
@@ -79,7 +76,6 @@ fun RightSide() {
             .backgroundColor(Theme.LighterGray.rgb)
             .padding(all = 20.px),
         horizontalArrangement = Arrangement.End
-
     ) {
         Section.values().take(6).forEach { section ->
             Link(
@@ -91,9 +87,7 @@ fun RightSide() {
                     .textDecorationLine(TextDecorationLine.None),
                 path = section.path,
                 text = section.title
-
             )
         }
-
     }
 }

@@ -124,9 +124,7 @@ fun ContactForm(breakpoint: Breakpoint) {
                     .toAttrs()
             ) {
                 Text("Submit")
-
             }
-
         }
     }
 }

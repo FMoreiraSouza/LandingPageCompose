@@ -31,14 +31,14 @@ fun SectionTitle(
 
     val scope = rememberCoroutineScope()
     var titleMargin by remember { mutableStateOf(50.px) }
-    var subTitleMargin by remember { mutableStateOf(50.px) }
+    var subtitleMargin by remember { mutableStateOf(50.px) }
 
     ObserveViewportEntered(
         sectionId = section.id,
         distanceFromTop = 700.0,
         onViewportEntered = {
             scope.launch {
-                subTitleMargin = 0.px
+                subtitleMargin = 0.px
                 if (alignment == Alignment.Start) {
                     delay(25)
                 }
@@ -47,9 +47,8 @@ fun SectionTitle(
         }
     )
 
-
     Column(
-        modifier = Modifier,
+        modifier = modifier,
         horizontalAlignment = alignment
     ) {
         P(
@@ -87,16 +86,16 @@ fun SectionTitle(
                     }
                 )
                 .margin(
-                    left = if(alignment == Alignment.Start) subTitleMargin else 0.px,
-                    right = if(alignment == Alignment.CenterHorizontally) subTitleMargin else 0.px,
+                    left = if(alignment == Alignment.Start) subtitleMargin else 0.px,
+                    right = if(alignment == Alignment.CenterHorizontally) subtitleMargin else 0.px,
                     bottom = 10.px,
                     top = 0.px
                 )
                 .fontFamily(FONT_FAMILY)
                 .fontSize(40.px)
                 .fontWeight(FontWeight.Bold)
-                .transition(CSSTransition(property = "margin", duration = 300.ms))
                 .color(Theme.Secondary.rgb)
+                .transition(CSSTransition(property = "margin", duration = 300.ms))
                 .toAttrs()
         ) {
             Text(section.subtitle)
