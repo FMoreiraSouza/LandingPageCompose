@@ -4,6 +4,7 @@ import com.stevdza.san.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.Visibility
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.hover
@@ -24,11 +25,12 @@ val PortfolioSectionStyle by ComponentStyle {
     cssRule(" > #columnParent > #boxParent > #greenOverlay > #linkIcon") {
         Modifier
             .visibility(Visibility.Hidden)
+            .color(Colors.Gray)
 
     }
 
     cssRule(":hover > #columnParent > #boxParent > #greenOverlay > #linkIcon") {
-        Modifier.visibility(Visibility.Visible)
+        Modifier.visibility(Visibility.Visible).color(Colors.Gray)
     }
     cssRule(" > #columnParent > #portfolioTitle") {
         Modifier

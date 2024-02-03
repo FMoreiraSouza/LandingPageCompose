@@ -13,6 +13,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.icons.fa.FaBars
@@ -49,10 +50,14 @@ fun LeftSide(
     breakpoint: Breakpoint,
     onMenuClicked: () -> Unit
 ) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
+    Row(
+        modifier = Modifier
+            .backgroundColor(Colors.Blue),
+                verticalAlignment = Alignment.CenterVertically) {
         if (breakpoint <= Breakpoint.MD) {
             FaBars(
-                modifier = Modifier.margin(right = 15.px)
+                modifier = Modifier
+                    .margin(right = 15.px)
                     .onClick {
                         onMenuClicked()
                     },

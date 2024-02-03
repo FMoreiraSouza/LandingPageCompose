@@ -48,8 +48,8 @@ fun OverflowMenu(onMenuClosed: () -> Unit) {
             .fillMaxWidth()
             .height(100.vh)
             .position(Position.Fixed)
-            .zIndex(2)
-            .opacity(opacity)
+//            .zIndex(2)
+//            .opacity(opacity)
             .backgroundColor(argb(a = 0.5f, r = 0.0f, g = 0.0f, b = 0.0f))
             .transition(CSSTransition(property = "opacity", duration = 500.ms))
     ) {

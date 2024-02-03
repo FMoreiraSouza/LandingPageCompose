@@ -13,7 +13,6 @@ import com.stevdza.san.util.Constants.LOREM_IPSUM_SHORT
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.ObserveViewportEntered
 import com.stevdza.san.util.Res
-import com.stevdza.san.util.animateNumbers
 import com.varabyte.kobweb.compose.css.FontStyle
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -29,7 +28,6 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.components.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
-import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.P
@@ -101,15 +99,15 @@ fun AboutMe() {
         onViewportEntered = {
             viewportEntered = true
             Skill.values().forEach { skill ->
-                scope.launch {
-                    animateNumbers(
-                        number = skill.percentage.value.toInt(),
-                        onUpdate = {
-                            animatedPercentage[skill.ordinal] = it
-
-                        }
-                    )
-                }
+//                scope.launch {
+////                    animateNumbers(
+////                        number = skill.percentage.value.toInt(),
+////                        onUpdate = {
+////                            animatedPercentage[skill.ordinal] = it
+////
+////                        }
+////                    )
+//                }
             }
         }
     )

@@ -50,6 +50,7 @@ fun SocialBar(row: Boolean = false) {
 @Composable
 private fun SocialLinks(row: Boolean = false) {
     Link(
+        modifier = Modifier.backgroundColor(Colors.Green),
         path = WEBSITE,
         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB
     ) {

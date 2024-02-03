@@ -7,7 +7,6 @@ import com.stevdza.san.models.Section
 import com.stevdza.san.models.Theme
 import com.stevdza.san.util.Constants.SECTION_WIDTH
 import com.stevdza.san.util.ObserveViewportEntered
-import com.stevdza.san.util.animateNumbers
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -50,12 +49,12 @@ fun AchievementsContent(breakpoint: Breakpoint) {
             viewportEntered = true
             Achievement.values().forEach { achievement ->
                 scope.launch {
-                    animateNumbers(
-                        number = achievement.number,
-                        onUpdate = {
-                            animatedNumbers[achievement.ordinal] = it
-                        }
-                    )
+//                    animateNumbers(
+//                        number = achievement.number,
+//                        onUpdate = {
+//                            animatedNumbers[achievement.ordinal] = it
+//                        }
+//                    )
                 }
             }
         }

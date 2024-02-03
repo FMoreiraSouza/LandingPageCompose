@@ -24,9 +24,7 @@ fun HomePage() {
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            MainSection(onMenuClicked = {
-                menuOpened = true
-            })
+            MainSection(onMenuClicked = { menuOpened = true })
             AboutSection()
             ServiceSection()
             PortfolioSection()

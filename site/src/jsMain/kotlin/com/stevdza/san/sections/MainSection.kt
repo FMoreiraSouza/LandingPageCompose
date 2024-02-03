@@ -55,7 +55,7 @@ fun MainBackground() {
             .fillMaxSize()
             .objectFit(ObjectFit.Cover),
         src = Res.Image.background,
-        description = "Background Image"
+        description = "Background Image",
     )
 }
 

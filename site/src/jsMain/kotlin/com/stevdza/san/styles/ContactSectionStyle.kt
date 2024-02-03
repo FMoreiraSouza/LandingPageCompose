@@ -3,6 +3,7 @@ package com.stevdza.san.styles
 import com.stevdza.san.models.Theme
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.transition
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
@@ -26,7 +27,7 @@ val InputStyle by ComponentStyle {
         Modifier.border(
             width = 2.px,
             style = LineStyle.Solid,
-            color = Theme.Primary.rgb
+            color = Colors.RoyalBlue
         )
     }
     hover {
